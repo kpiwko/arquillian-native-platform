@@ -14,29 +14,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.arquillian.spacelift.tool;
+package org.arquillian.spacelift.tool.event;
 
-import java.text.MessageFormat;
+import org.arquillian.spacelift.tool.ToolRegistry;
 
 /**
+ * Event fired after {@link ToolRegistry} is initialized.
  *
- * @author <a href="kpiwko@redhat.com">Karel Piwko</a>
+ * @author <a href="smikloso@redhat.com">Stefan Miklosovic</a>
  *
  */
-public class InvalidToolException extends RuntimeException {
-
-    private static final long serialVersionUID = 1L;
-
-    public InvalidToolException() {
-        super();
-    }
-
-    public InvalidToolException(Throwable cause, String messageFormat, Object... args) {
-        super(MessageFormat.format(messageFormat, args), cause);
-    }
-
-    public InvalidToolException(String messageFormat, Object... args) {
-        super(MessageFormat.format(messageFormat, args));
-    }
-
+public class ToolRegistryInitialized {
 }
